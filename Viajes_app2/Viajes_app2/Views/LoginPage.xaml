@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Viajes_app2.Views.LoginPage"
+             xmlns:viewmodels="clr-namespace:Viajes_app2.ViewModels">
+    <ContentPage.BindingContext>
+        <viewmodels:LoginViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Label Text="Iniciar Sesión" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Entry Placeholder="Usuario (correo)" Text="{Binding Usuario}" />
+        <Entry Placeholder="Contraseña" Text="{Binding Contraseña}" IsPassword="True" />
+        <Button Text="Iniciar Sesión" Command="{Binding IniciarSesionCommand}" />
+    </StackLayout>
+</ContentPage>
